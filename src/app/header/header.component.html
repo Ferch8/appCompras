@@ -9,11 +9,14 @@
 
   <div class="collapse navbar-collapse" id="containerNavbar">
     <ul class="navbar-nav mr-auto w-100 justify-content-end">
-      <li class="nav-item" routerLinkActive="active">
+      <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >
         <a class="nav-link" routerLink="/">Inicio </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="/proveedores">Proveedores </a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="/addpres">Añadir presupuesto</a>
       </li>
     </ul>
   </div>
