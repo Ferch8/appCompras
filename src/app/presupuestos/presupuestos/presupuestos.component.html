@@ -9,7 +9,8 @@
       <th>Importe sin iva</th>
       <th>Iva</th>
       <th>Total</th>
-      <th>Opciones</th>
+      <th>Editar</th>
+      <th>Eliminar</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,11 @@
       <td>
         <button type="button" class="btn btn-success" routerLink="/editpres/{{presupuesto.id$}}">
           Editar
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="eliminarPresupuesto(presupuesto.id$)">
+          Eliminar
         </button>
       </td>
     </tr>

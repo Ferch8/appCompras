@@ -37,7 +37,7 @@ export class PresupuestosService {
   putPresupuesto(presupuesto: any, id$: string){
     const newpre = JSON.stringify(presupuesto);
     const headers = new Headers({
-      'ContentType': 'application/json';
+      'ContentType': 'application/json'
     });
     const url = `${this.preURL}/${id$}.json`;
 
@@ -46,6 +46,12 @@ export class PresupuestosService {
         console.log(res.json());
         return res.json();
       })
+  }
+
+  delPresupuesto(id$: string){
+    const url = `${this.preURL}/${id$}.json`;
+    return this.http.delete(url)
+      .map( res => res.json());
   }
 
 }
