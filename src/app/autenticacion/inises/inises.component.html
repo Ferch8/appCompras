@@ -8,7 +8,8 @@
       <label>Contraseña</label>
       <input type="password" class="form-control" id="inputPassword" formControlName="password">
       <hr>
-      <button type="submit" class="btn btn-primary">Inicio de sesion</button>
+      <button type="submit" class="btn btn-primary" *ngIf="!autenticando">Inicio de sesion</button>
+      <button type="submit" class="btn btn-primary" *ngIf="autenticando">Loading...</button>
     </form>
     <p>No tienes una cuenta ? <a routerLink="/registro">Registrate</a></p>
     <p class="alert alert-danger" *ngIf="mensaje">El usuario o contraseña no es correcto !</p>
